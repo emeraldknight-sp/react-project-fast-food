@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -47,3 +50,44 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+:root{
+	--red:#e83c2e;
+	--gray: #121212;
+	--yellow: #FCBA1C;
+
+	--tipography-opensans: "Open Sans", sans-serif;
+	--tipography-kalam: "Kalam", cursive;
+	--tipography-oswald: "Oswald", sans-serif;
+
+	--text-5xl: 3rem;
+	--text-4xl: 2.25rem;
+	--text-3xl: 1.875rem;
+	--text-2xl: 1.5rem;
+	--text-xl: 1.25rem;
+	--text-lg: 1.125rem;
+	--text-md: 1rem;
+	--text-sm: 0.875rem;
+	--text-xs: 0.75rem;
+
+	--line-height-5xl: 1;
+	--line-height-4xl: 2.5rem;
+	--line-height-3xl: 2.25rem;
+	--line-height-2xl: 2rem;
+	--line-height-xl: 1.75rem;
+	--line-height-lg: 1.75rem;
+	--line-height-md: 1.5rem;
+	--line-height-sm: 1.25rem;
+	--line-height-xs: 1rem;
+
+	--rounded-none: 0px;
+	--rounded-sm:	0.125rem;
+	--rounded: 0.25rem;
+	--rounded-md:	0.375rem;
+	--rounded-lg:	0.5rem;
+	--rounded-xl:	0.75rem;
+	--rounded-2xl:	1rem;
+	--rounded-3xl: 1.5rem;
+	--rounded-full: 9999px;
+}
+`;
