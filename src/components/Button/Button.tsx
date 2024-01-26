@@ -1,14 +1,18 @@
 import { StyledButton } from "./Button.style";
 
-export const Button = ({ id, type, children, classname, arialabel, onClick }: ButtonProps) => {
+export const Button = ({
+  children,
+  type = "button",
+  color = "primary",
+  size = "md",
+  classname,
+  arialabel = "",
+  onClick,
+}: ButtonProps) => {
+  const classNameButton = `button--${color} button--${size} ${classname}`;
+
   return (
-    <StyledButton
-      id={id}
-      type={type}
-      className={classname}
-      onClick={onClick}
-      aria-label={arialabel}
-    >
+    <StyledButton type={type} className={classNameButton} onClick={onClick} aria-label={arialabel}>
       {children}
     </StyledButton>
   );
