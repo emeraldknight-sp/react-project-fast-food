@@ -3,4 +3,4 @@ build/
 dist/
 .env
 .vercel
-src/styles/globals.css
+src/styles/globals.ts
