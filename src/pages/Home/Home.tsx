@@ -1,3 +1,11 @@
+import { Button } from "../../components/Button";
 import "./Home.style.css";
 
-export const Home = () => <p>Hello World</p>;
+export const Home = () => (
+  <>
+    <h1>Hello World</h1>
+    <Button>
+      <span>Clique me!</span>
+    </Button>
+  </>
+);
