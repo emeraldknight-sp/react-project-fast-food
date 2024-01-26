@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { reportWebVitals } from "./reportWebVitals";
 import { Metric } from "web-vitals";
 import { App } from "./App";
-import "./styles/globals.css";
+import { GlobalStyles } from "./styles/globals";
 
 const rootElement = document.getElementById("root");
 const handleWebVitals = (metric: Metric) => {
@@ -14,6 +14,7 @@ if (rootElement) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
+      <GlobalStyles />
       <App />
     </React.StrictMode>,
   );
