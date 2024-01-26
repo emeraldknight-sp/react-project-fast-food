@@ -1,8 +1,9 @@
 interface ButtonProps {
-  id?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   type?: "submit" | "button" | "reset" | undefined;
+  color: "primary" | "secondary" | "tertiary";
+  size?: "xs" | "sm" | "md" | "lg";
   classname?: string;
-  arialabel?: string;
+  arialabel: string;
   onClick?: () => void;
 }
