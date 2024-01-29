@@ -6,7 +6,7 @@ export const Button = ({
   color = "primary",
   size = "md",
   classname,
-  arialabel = "",
+  arialabel,
   onClick,
 }: ButtonProps) => {
   const classNameButton = `button--${color} button--${size} ${classname}`;

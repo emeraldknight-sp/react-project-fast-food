@@ -52,7 +52,7 @@ table {
 }
 
 :root{
-	--red:#e83c2e;
+	--red: #e83c2e;
 	--gray: #121212;
 	--yellow: #FCBA1C;
 
