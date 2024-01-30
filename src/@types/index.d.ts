@@ -1,3 +1,7 @@
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.webp";
+
 interface ButtonProps {
   children: React.ReactNode;
   type?: "submit" | "button" | "reset" | undefined;
