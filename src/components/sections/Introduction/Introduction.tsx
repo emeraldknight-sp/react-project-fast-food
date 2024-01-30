@@ -1,17 +1,28 @@
 import { Button } from "../../../components/Button";
 import IntroductionImage from "../../../assets/images/global/introduction.png";
-import { StyledIntroduction, StyledList, StyledListItem } from "./Introduction.style";
+import {
+  StyledFlexDiv,
+  StyledIntroduction,
+  StyledList,
+  StyledListItem,
+} from "./Introduction.style";
 import { Container } from "../../Container";
 
 export const Introduction = () => {
+  const handleClick = (e: MouseEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <StyledIntroduction>
       <Container className="container">
-        <img
-          src={IntroductionImage}
-          alt="Delicious juicy burger, prepared with fresh, high-quality ingredients."
-        />
-        <div>
+        <StyledFlexDiv>
+          <img
+            src={IntroductionImage}
+            alt="Delicious juicy burger, prepared with fresh, high-quality ingredients."
+          />
+        </StyledFlexDiv>
+        <StyledFlexDiv>
           <span>Natural</span>
           <h3>100% natural fresh ingredients</h3>
           <p>
@@ -27,10 +38,12 @@ export const Introduction = () => {
             </StyledListItem>
             <StyledListItem>Ornare vitae pulvinar hendrerit quis adipiscing.</StyledListItem>
           </StyledList>
-          <Button size="md" arialabel="About us">
-            <a href="http://">About us</a>
+          <Button size="md" arialabel="About us" onClick={handleClick}>
+            <a href="/" target="_self" rel="noopener">
+              About us
+            </a>
           </Button>
-        </div>
+        </StyledFlexDiv>
       </Container>
     </StyledIntroduction>
   );
