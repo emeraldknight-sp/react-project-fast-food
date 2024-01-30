@@ -2,6 +2,14 @@ import styled from "styled-components";
 import Badge from "../../../assets/images/background/title.png";
 
 export const StyledIntroduction = styled.section`
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+  }
+
   div {
     display: flex;
     flex-direction: column;

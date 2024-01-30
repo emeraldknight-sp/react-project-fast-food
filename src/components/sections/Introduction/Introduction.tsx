@@ -1,11 +1,12 @@
 import { Button } from "../../../components/Button";
 import IntroductionImage from "../../../assets/images/global/introduction.png";
 import { StyledIntroduction, StyledList, StyledListItem } from "./Introduction.style";
+import { Container } from "../../Container";
 
 export const Introduction = () => {
   return (
     <StyledIntroduction>
-      <div className="container">
+      <Container className="container">
         <img
           src={IntroductionImage}
           alt="Delicious juicy burger, prepared with fresh, high-quality ingredients."
@@ -30,7 +31,7 @@ export const Introduction = () => {
             <a href="http://">About us</a>
           </Button>
         </div>
-      </div>
+      </Container>
     </StyledIntroduction>
   );
 };
