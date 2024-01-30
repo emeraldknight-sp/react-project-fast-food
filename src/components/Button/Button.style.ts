@@ -4,7 +4,6 @@ export const StyledButton = styled.button`
   outline: none;
   border-radius: var(--rounded);
   border: none;
-  padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.5s ease;
 
@@ -24,21 +23,22 @@ export const StyledButton = styled.button`
   }
 
   &.button--xs {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
   }
 
   &.button--sm {
-    padding: 0.75rem;
+    padding: 1rem 2rem;
   }
 
   &.button--md {
-    padding: 1rem;
+    padding: 1rem 3rem;
   }
 
   &.button--lg {
-    padding: 1.5rem;
+    padding: 1rem 5rem;
   }
 
+  a,
   span {
     font-size: var(--text-md);
     font-family: var(--tipography-oswald);
@@ -47,6 +47,8 @@ export const StyledButton = styled.button`
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
   }
 
   &:hover {
