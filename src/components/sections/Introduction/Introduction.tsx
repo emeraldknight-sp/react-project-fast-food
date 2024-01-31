@@ -1,28 +1,53 @@
 import { Button } from "../../../components/Button";
 import IntroductionImage from "../../../assets/images/global/introduction.png";
 import {
+  StyledAnimation,
   StyledFlexDiv,
   StyledIntroduction,
   StyledList,
   StyledListItem,
 } from "./Introduction.style";
 import { Container } from "../../Container";
+import { useEffect, useState } from "react";
+import IntroductionArrow from "../../../assets/images/global/introduction-arrow.png";
 
 export const Introduction = () => {
   const handleClick = (e: MouseEvent) => {
     e.preventDefault();
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById("animation-arrow");
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const elementMiddle = rect.top + rect.height / 2;
+        setIsVisible(elementMiddle >= 0 && elementMiddle <= window.innerHeight);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <StyledIntroduction>
+      <StyledAnimation id="animation-arrow" isVisible={isVisible}>
+        <img src={IntroductionArrow} alt="Delicious Angus Burger" />
+      </StyledAnimation>
       <Container className="container">
-        <StyledFlexDiv>
+        <StyledFlexDiv className="introduction__image">
           <img
             src={IntroductionImage}
             alt="Delicious juicy burger, prepared with fresh, high-quality ingredients."
           />
         </StyledFlexDiv>
-        <StyledFlexDiv>
+        <StyledFlexDiv className="introduction__description">
           <span>Natural</span>
           <h3>100% natural fresh ingredients</h3>
           <p>

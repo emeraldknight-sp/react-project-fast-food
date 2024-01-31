@@ -3,12 +3,18 @@ import Badge from "../../../assets/images/background/title.png";
 import Grunge from "../../../assets/images/background/grunge.png";
 
 export const StyledIntroduction = styled.section`
+  position: relative;
+
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+
+    @media (min-width: 1440px) {
+      flex-direction: row;
+    }
   }
 
   &::before {
@@ -55,10 +61,18 @@ export const StyledIntroduction = styled.section`
 export const StyledFlexDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 32px;
-  flex: 1;
+  width: 100%;
+
+  &.introduction__image {
+    align-items: center;
+  }
+
+  &.introduction__description {
+    align-items: flex-start;
+  }
 `;
 
 export const StyledList = styled.ul`
@@ -76,4 +90,14 @@ export const StyledListItem = styled.li`
   line-height: var(--line-height-md);
   letter-spacing: 0.5px;
   color: var(--lightGray);
+`;
+
+export const StyledAnimation = styled.div<StyledAnimationProps>`
+  position: absolute;
+  z-index: 1;
+  opacity: ${(props) => (props.isVisible ? 1 : 0)};
+  transform: translate(${(props) => (props.isVisible ? "100%, 150%" : "0%, 150%")});
+  transition:
+    opacity 0.5s,
+    transform 0.5s;
 `;
