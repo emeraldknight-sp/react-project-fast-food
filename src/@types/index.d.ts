@@ -9,5 +9,10 @@ interface ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
   classname?: string;
   arialabel: string;
-  onClick?: () => void;
+  onClick?: (e: any) => void;
+}
+
+interface StyledAnimationProps {
+  children: React.ReactNode;
+  isVisible: boolean;
 }
