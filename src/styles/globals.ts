@@ -52,11 +52,11 @@ table {
 }
 
 :root{
-	--red: #e83c2e;
-	--gray: #121212;
+	--lightGray: #797979;
 	--yellow: #FCBA1C;
 	--black: #171717;
-	--lightGray: #797979;
+	--white: #FFFFFF;
+	--red: #E83C2E;
 
 	--tipography-opensans: "Open Sans", sans-serif;
 	--tipography-kalam: "Kalam", cursive;
