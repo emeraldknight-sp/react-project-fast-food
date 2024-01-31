@@ -1,4 +1,4 @@
-import { Button } from "../../../components/Button";
+import { Button } from "../../buttons/Button";
 import IntroductionImage from "../../../assets/images/global/introduction.png";
 import {
   StyledAnimation,
@@ -63,7 +63,13 @@ export const Introduction = () => {
             </StyledListItem>
             <StyledListItem>Ornare vitae pulvinar hendrerit quis adipiscing.</StyledListItem>
           </StyledList>
-          <Button size="md" arialabel="About us" onClick={handleClick}>
+          <Button
+            type="button"
+            color="primary"
+            size="md"
+            ariaLabel="About us"
+            onClick={handleClick}
+          >
             <a href="/" target="_self" rel="noopener">
               About us
             </a>
